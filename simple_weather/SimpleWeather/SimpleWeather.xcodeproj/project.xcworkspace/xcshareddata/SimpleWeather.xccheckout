@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>227C1106-4D5D-494D-B1AE-FB18424E831D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleWeather</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2B39050B-95A0-4FD1-BF67-306B4B2E441C</key>
+		<string>ssh://github.com/chocoby/tutorials.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>simple_weather/SimpleWeather/SimpleWeather.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2B39050B-95A0-4FD1-BF67-306B4B2E441C</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/chocoby/tutorials.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2B39050B-95A0-4FD1-BF67-306B4B2E441C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2B39050B-95A0-4FD1-BF67-306B4B2E441C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tutorials</string>
+		</dict>
+	</array>
+</dict>
+</plist>
