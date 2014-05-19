@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>227C1106-4D5D-494D-B1AE-FB18424E831D</string>
+	<string>36077E6E-9483-4AAD-9895-5072A189F91A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SimpleWeather</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>2B39050B-95A0-4FD1-BF67-306B4B2E441C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>tutorials</string>
+			<string>SimpleWeather</string>
 		</dict>
 	</array>
 </dict>
