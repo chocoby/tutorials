@@ -19,7 +19,7 @@
 		3F10FE4F1929D57B005880BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F10FE371929D57B005880BC /* UIKit.framework */; };
 		3F10FE571929D57B005880BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F10FE551929D57B005880BC /* InfoPlist.strings */; };
 		3F10FE591929D57B005880BC /* SimpleWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F10FE581929D57B005880BC /* SimpleWeatherTests.m */; };
-		3FE8DAD5192A58F50080972C /* WXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8DAD4192A58F50080972C /* WXViewController.m */; };
+		3FE8DAD5192A58F50080972C /* WXController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8DAD4192A58F50080972C /* WXController.m */; };
 		7491807245EF4EA2A9D7F4DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B00D79DFB4440A8A68A0CC0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +52,8 @@
 		3F10FE541929D57B005880BC /* SimpleWeatherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleWeatherTests-Info.plist"; sourceTree = "<group>"; };
 		3F10FE561929D57B005880BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F10FE581929D57B005880BC /* SimpleWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleWeatherTests.m; sourceTree = "<group>"; };
-		3FE8DAD3192A58F50080972C /* WXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXViewController.h; sourceTree = "<group>"; };
-		3FE8DAD4192A58F50080972C /* WXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXViewController.m; sourceTree = "<group>"; };
+		3FE8DAD3192A58F50080972C /* WXController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXController.h; sourceTree = "<group>"; };
+		3FE8DAD4192A58F50080972C /* WXController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +116,8 @@
 		3F10FE391929D57B005880BC /* SimpleWeather */ = {
 			isa = PBXGroup;
 			children = (
-				3FE8DAD3192A58F50080972C /* WXViewController.h */,
-				3FE8DAD4192A58F50080972C /* WXViewController.m */,
+				3FE8DAD3192A58F50080972C /* WXController.h */,
+				3FE8DAD4192A58F50080972C /* WXController.m */,
 				3F10FE421929D57B005880BC /* AppDelegate.h */,
 				3F10FE431929D57B005880BC /* AppDelegate.m */,
 				3F10FE451929D57B005880BC /* Images.xcassets */,
@@ -287,7 +287,7 @@
 			files = (
 				3F10FE441929D57B005880BC /* AppDelegate.m in Sources */,
 				3F10FE401929D57B005880BC /* main.m in Sources */,
-				3FE8DAD5192A58F50080972C /* WXViewController.m in Sources */,
+				3FE8DAD5192A58F50080972C /* WXController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
