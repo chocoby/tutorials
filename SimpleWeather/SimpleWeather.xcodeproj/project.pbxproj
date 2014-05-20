@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				3FE8DAD3192A58F50080972C /* WXController.h */,
-				3FE8DAD6192A5F990080972C /* Images */,
 				3FE8DAD4192A58F50080972C /* WXController.m */,
+				3FE8DAD6192A5F990080972C /* Images */,
 				3F10FE421929D57B005880BC /* AppDelegate.h */,
 				3F10FE431929D57B005880BC /* AppDelegate.m */,
 				3F10FE451929D57B005880BC /* Images.xcassets */,
