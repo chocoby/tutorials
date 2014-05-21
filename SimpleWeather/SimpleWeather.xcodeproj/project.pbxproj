@@ -49,6 +49,7 @@
 		3FE8DB0E192C36ED0080972C /* WXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8DB0D192C36ED0080972C /* WXManager.m */; };
 		3FE8DB11192C37080080972C /* WXCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8DB10192C37080080972C /* WXCondition.m */; };
 		3FE8DB14192C372B0080972C /* WXDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8DB13192C372B0080972C /* WXDailyForecast.m */; };
+		3FE8DB17192C7A970080972C /* WXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8DB16192C7A970080972C /* WXClient.m */; };
 		7491807245EF4EA2A9D7F4DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B00D79DFB4440A8A68A0CC0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,8 @@
 		3FE8DB10192C37080080972C /* WXCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCondition.m; sourceTree = "<group>"; };
 		3FE8DB12192C372B0080972C /* WXDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDailyForecast.h; sourceTree = "<group>"; };
 		3FE8DB13192C372B0080972C /* WXDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDailyForecast.m; sourceTree = "<group>"; };
+		3FE8DB15192C7A970080972C /* WXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXClient.h; sourceTree = "<group>"; };
+		3FE8DB16192C7A970080972C /* WXClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				3FE8DAD3192A58F50080972C /* WXController.h */,
 				3FE8DAD4192A58F50080972C /* WXController.m */,
 				3FE8DB0C192C36ED0080972C /* WXManager.h */,
+				3FE8DB15192C7A970080972C /* WXClient.h */,
+				3FE8DB16192C7A970080972C /* WXClient.m */,
 				3FE8DB0D192C36ED0080972C /* WXManager.m */,
 				3FE8DB0F192C37080080972C /* WXCondition.h */,
 				3FE8DB10192C37080080972C /* WXCondition.m */,
@@ -420,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE8DB17192C7A970080972C /* WXClient.m in Sources */,
 				3FE8DB0E192C36ED0080972C /* WXManager.m in Sources */,
 				3FE8DB14192C372B0080972C /* WXDailyForecast.m in Sources */,
 				3FE8DB11192C37080080972C /* WXCondition.m in Sources */,
