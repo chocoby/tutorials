@@ -71,7 +71,7 @@
 
     CGRect conditionsFrame = iconFrame;
     conditionsFrame.size.width = self.view.bounds.size.width - (((2 * inset) + iconHeight) + 10);
-    conditionsFrame.origin.x = iconFrame.origin.x;
+    conditionsFrame.origin.x = iconFrame.origin.x + (iconHeight + 10);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
