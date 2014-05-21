@@ -84,4 +84,23 @@
     return [self dateJSONTransformer];
 }
 
++ (NSValueTransformer *)conditionDescriptionJSONTransformer
+{
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
+        return [values firstObject];
+    } reverseBlock:^(NSString *str) {
+        return @[str];
+    }];
+}
+
++ (NSValueTransformer *)conditionJSONTransformer
+{
+    return [self conditionDescriptionJSONTransformer];
+}
+
++ (NSValueTransformer *)iconJSONTransformer
+{
+    return [self conditionDescriptionJSONTransformer];
+}
+
 @end
