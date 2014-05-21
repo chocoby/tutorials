@@ -65,4 +65,23 @@
              };
 }
 
++ (NSValueTransformer *)dateJSONTransformer
+{
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+        return [NSDate dateWithTimeIntervalSince1970:str.floatValue];
+    } reverseBlock:^(NSDate *date) {
+        return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
+    }];
+}
+
++ (NSValueTransformer *)sunriseJSONTransformer
+{
+    return [self dateJSONTransformer];
+}
+
++ (NSValueTransformer *)sunsetJSONTransformer
+{
+    return [self dateJSONTransformer];
+}
+
 @end
