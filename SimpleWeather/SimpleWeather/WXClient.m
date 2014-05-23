@@ -35,7 +35,20 @@
 
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            // TODO: Handle retriving data
+            if (!error) {
+                NSError *jsonError = nil;
+
+                id json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+                if (!jsonError) {
+                    [subscriber sendNext:json];
+                } else {
+                    [subscriber sendError:jsonError];
+                }
+            } else {
+                [subscriber sendError:error];
+            }
+
+            [subscriber sendCompleted];
         }];
 
         [dataTask resume];
