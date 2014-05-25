@@ -37,4 +37,33 @@
     return _sharedManager;
 }
 
+- (id)init
+{
+    if (self = [super init]) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+
+        _client = [[WXClient alloc] init];
+
+        [[[[RACObserve(self, currentLocation)
+           ignore:nil]
+
+           flattenMap:^(CLLocation *newLocation) {
+               return [RACSignal merge:@[
+                                         [self updateCurrentConditions],
+                                         [self updateDailyForecast],
+                                         [self updateHourlyForecast]
+                                         ]];
+           }] deliverOn:RACScheduler.mainThreadScheduler]
+
+         subscribeError:^(NSError *error) {
+             [TSMessage showNotificationWithTitle:@"Error"
+                                         subtitle:@"There was a problem fetching the latest weather."
+                                             type:TSMessageNotificationTypeError];
+         }];
+    }
+
+    return self;
+}
+
 @end
