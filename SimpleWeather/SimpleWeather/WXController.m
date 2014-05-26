@@ -18,9 +18,25 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGFloat screenHeight;
 
+@property (nonatomic, strong) NSDateFormatter *hourlyFormatter;
+@property (nonatomic, strong) NSDateFormatter *dailyFormatter;
+
 @end
 
 @implementation WXController
+
+- (id)init
+{
+    if (self = [super init]) {
+        _hourlyFormatter = [[NSDateFormatter alloc] init];
+        _hourlyFormatter.dateFormat = @"h a";
+
+        _dailyFormatter = [[NSDateFormatter alloc] init];
+        _dailyFormatter.dateFormat = @"EEEE";
+    }
+
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
