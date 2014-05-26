@@ -267,6 +267,17 @@
     return self.screenHeight / (CGFloat)cellCount;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat height = scrollView.bounds.size.height;
+    CGFloat position = MAX(scrollView.contentOffset.y, 0.0);
+
+    CGFloat percent = MIN(position / height, 1.0);
+
+    self.blurredImageView.alpha = percent;
+}
+
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
