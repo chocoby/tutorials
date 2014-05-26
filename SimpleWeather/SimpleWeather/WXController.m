@@ -117,6 +117,16 @@
     iconView.backgroundColor = [UIColor clearColor];
     [header addSubview:iconView];
 
+    [[RACObserve([WXManager sharedManager], currentCondition)
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(WXCondition *newCondition) {
+         temperatureLabel.text = [NSString stringWithFormat:@"%.0f°", newCondition.temperature.floatValue];
+         conditionsLabel.text = [newCondition.condition capitalizedString];
+         cityLabel.text = [newCondition.locationName capitalizedString];
+
+         iconView.image = [UIImage imageNamed:[newCondition imageName]];
+     }];
+
     [[WXManager sharedManager] findCurrentLocation];
 }
 
