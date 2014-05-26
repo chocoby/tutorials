@@ -176,8 +176,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // TODO: Return count of forecast
-    return 0;
+    if (section == 0) {
+        return MIN([[WXManager sharedManager].hourlyForecast count], 6) + 1;
+    }
+
+    return MIN([[WXManager sharedManager].dailyForecast count], 6) + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
