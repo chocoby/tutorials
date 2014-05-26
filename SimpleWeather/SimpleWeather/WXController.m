@@ -262,8 +262,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: Determine cell height based on screen
-    return 44;
+    NSInteger cellCount = [self tableView:tableView numberOfRowsInSection:indexPath.section];
+
+    return self.screenHeight / (CGFloat)cellCount;
 }
 
 - (void)viewWillLayoutSubviews
