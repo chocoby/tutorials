@@ -99,7 +99,7 @@
     UILabel *temperatureLabel = [[UILabel alloc] initWithFrame:temperatureFrame];
     temperatureLabel.backgroundColor = [UIColor clearColor];
     temperatureLabel.textColor = [UIColor whiteColor];
-    temperatureLabel.text = @"0°";
+    temperatureLabel.text = @"0°C";
     temperatureLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:120];
     [header addSubview:temperatureLabel];
 
@@ -107,7 +107,7 @@
     UILabel *hiloLabel = [[UILabel alloc] initWithFrame:hiloFrame];
     hiloLabel.backgroundColor = [UIColor clearColor];
     hiloLabel.textColor = [UIColor whiteColor];
-    hiloLabel.text = @"0° / 0°";
+    hiloLabel.text = @"0°C / 0°C";
     hiloLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
     [header addSubview:hiloLabel];
 
@@ -136,7 +136,7 @@
     [[RACObserve([WXManager sharedManager], currentCondition)
       deliverOn:RACScheduler.mainThreadScheduler]
      subscribeNext:^(WXCondition *newCondition) {
-         temperatureLabel.text = [NSString stringWithFormat:@"%.0f°", newCondition.temperature.floatValue];
+         temperatureLabel.text = [NSString stringWithFormat:@"%.0f°C", newCondition.temperature.floatValue];
          conditionsLabel.text = [newCondition.condition capitalizedString];
          cityLabel.text = [newCondition.locationName capitalizedString];
 
@@ -147,7 +147,7 @@
                                                        RACObserve([WXManager sharedManager], currentCondition.tempHigh),
                                                        RACObserve([WXManager sharedManager], currentCondition.tempLow)]
                                               reduce:^(NSNumber *hi, NSNumber *low) {
-                                                  return [NSString stringWithFormat:@"%.0f° / %.0f°", hi.floatValue, low.floatValue];
+                                                  return [NSString stringWithFormat:@"%.0f°C / %.0f°C", hi.floatValue, low.floatValue];
                                               }]
                             deliverOn:RACScheduler.mainThreadScheduler];
 
@@ -241,7 +241,7 @@
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
     cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18];
     cell.textLabel.text = [self.hourlyFormatter stringFromDate:weather.date];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f°", weather.temperature.floatValue];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f°C", weather.temperature.floatValue];
     cell.imageView.image = [UIImage imageNamed:[weather imageName]];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
@@ -251,7 +251,7 @@
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
     cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18];
     cell.textLabel.text = [self.dailyFormatter stringFromDate:weather.date];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f° / %.0f°",
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f°C / %.0f°C",
                                  weather.tempHigh.floatValue,
                                  weather.tempLow.floatValue];
     cell.imageView.image = [UIImage imageNamed:[weather imageName]];

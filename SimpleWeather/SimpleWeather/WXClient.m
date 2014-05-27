@@ -63,7 +63,7 @@
 
 - (RACSignal *)fetchCurrentConditionsForLocation:(CLLocationCoordinate2D)coordinate
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=imperial", coordinate.latitude, coordinate.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=metric", coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
 
     return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
@@ -73,7 +73,7 @@
 
 - (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)coordinate
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f&lon=%f&units=imperial&cnt=12", coordinate.latitude, coordinate.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f&lon=%f&units=metric&cnt=12", coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
 
     return  [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
@@ -87,7 +87,7 @@
 
 - (RACSignal *)fetchDailyForecastForLocation:(CLLocationCoordinate2D)coordinate
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&units=imperial&cnt=7", coordinate.latitude, coordinate.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&units=metric&cnt=7", coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
 
     return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
