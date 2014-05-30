@@ -241,7 +241,7 @@
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
     cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18];
     cell.textLabel.text = [self.hourlyFormatter stringFromDate:weather.date];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f°C", weather.temperature.floatValue];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f°C %.0fm/s", weather.temperature.floatValue, weather.windSpeed.floatValue];
     cell.imageView.image = [UIImage imageNamed:[weather imageName]];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
@@ -259,7 +259,6 @@
 }
 
 #pragma mark - UITableViewDelegate
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger cellCount = [self tableView:tableView numberOfRowsInSection:indexPath.section];

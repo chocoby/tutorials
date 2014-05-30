@@ -8,8 +8,6 @@
 
 #import "WXCondition.h"
 
-#define MPS_TO_MPH 2.23694f
-
 @implementation WXCondition
 
 + (NSDictionary *)imageMap
@@ -103,16 +101,6 @@
 + (NSValueTransformer *)iconJSONTransformer
 {
     return [self conditionDescriptionJSONTransformer];
-}
-
-+ (NSValueTransformer *)windSpeedJSONTransformer
-{
-    // TODO: miles -> meters
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSNumber *num) {
-        return @(num.floatValue * MPS_TO_MPH);
-    } reverseBlock:^(NSNumber *speed) {
-        return @(speed.floatValue / MPS_TO_MPH);
-    }];
 }
 
 @end
